@@ -2,7 +2,7 @@ Summary:	Compiler frontend for the W3C XML Schema definition language
 Summary(pl.UTF-8):	Frontend kompilatora do języka definicji W3C XML Schema
 Name:		libxsd-frontend
 Version:	2.0.0
-Release:	1
+Release:	2
 License:	GPL v2 + Xerces-C++ exception
 Group:		Libraries
 Source0:	https://www.codesynthesis.com/download/libxsd-frontend/2.0/%{name}-%{version}.tar.bz2
@@ -96,7 +96,9 @@ cp -p xsd-frontend/*.hxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend
 cp -p xsd-frontend/generators/*.hxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/generators
 cp -p xsd-frontend/semantic-graph/*.hxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/semantic-graph
 cp -p xsd-frontend/transformations/*.hxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/transformations
+cp -p xsd-frontend/transformations/enum-synthesis.cxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/transformations
 cp -p xsd-frontend/traversal/*.hxx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/traversal
+cp -p xsd-frontend/traversal/elements.txx $RPM_BUILD_ROOT%{_includedir}/xsd-frontend/traversal
 
 %clean
 rm -rf $RPM_BUILD_ROOT
